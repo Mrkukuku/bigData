@@ -133,7 +133,7 @@ export default {
             var _this = this
             this.map = new AMap.Map('container', {
                 center:_this.center,
-                resizeEnable: true,
+                resizeEnable: true, 
                 zoom: 16,
                 lang: "ch"
             });

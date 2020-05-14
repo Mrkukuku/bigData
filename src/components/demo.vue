@@ -297,22 +297,22 @@ export default {
                     ]
 
             function findMaxMin(data) {
-      let maxValue = 0;
-      let minValue = 50000;
-      let maxObj = null;
-      let minObj = null;
-      for (const d of data) {
-        if (d.Close > maxValue) {
-          maxValue = d.Close;
-          maxObj = d;
-        }
-        if (d.Close < minValue) {
-          minValue = d.Close;
-          minObj = d;
-        }
-      }
-      return { max: maxObj, min: minObj };
-    }
+              let maxValue = 0;
+              let minValue = 50000;
+              let maxObj = null;
+              let minObj = null;
+              for (const d of data) {
+                if (d.Close > maxValue) {
+                  maxValue = d.Close;
+                  maxObj = d;
+                }
+                if (d.Close < minValue) {
+                  minValue = d.Close;
+                  minObj = d;
+                }
+              }
+              return { max: maxObj, min: minObj };
+          }
 
   
         const chart = new Chart({
@@ -362,6 +362,9 @@ export default {
             length: 50,
           }
         });
+        chart.onLineClick = () =>{
+          console.log(1)
+        }
         chart.render();
     
         }

@@ -41,16 +41,6 @@ export const constantRoutes =[
     component: () => import('@/components/alarmData.vue'),
   },
   {
-    path:'/sic',
-    name:"视频测试",
-    component: () => import('@/components/alarmAnalysis/sicTest.vue')
-  },
-  {
-    path:'/locus',
-    name:"轨迹回放",
-    component: () => import('@/components/locus.vue')
-  },
-  {
       path: '/404',
       component: () => import('@/components/errorPage'),
       hidden: true
@@ -74,31 +64,6 @@ export const asyncRoutes = [
           }
         }
       ]
-    },
-    {
-      path:"/player",
-      name:"play",
-      component: menu,
-      redirect:"/player/index",
-      children:[
-        {
-          path:"index",
-          component: () => import('@/components/player.vue'),
-          meta:{
-            title:"视频监控",
-            roles:["edit"]
-          },
-        },
-        {
-          path:"demo",
-          component: () => import('@/components/demo.vue'),
-          meta:{
-            title:"G2",
-            roles:["edit"]
-          },
-        }
-      ],
-     
     },
     { path: '*', redirect: '/404', hidden: true }
 ]
